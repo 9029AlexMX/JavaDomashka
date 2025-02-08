@@ -2,7 +2,20 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        // Testing ReverseLinkedList.
+        // Just testing.
+        // testReversedLinkedList();
+        testValidParentheses();
+    }
+
+    private static void testValidParentheses() {
+        ValidParentheses.init();
+        System.out.println(ValidParentheses.isValid("()"));
+        System.out.println(ValidParentheses.isValid("()[]{}"));
+        System.out.println(ValidParentheses.isValid("(]"));
+        System.out.println(ValidParentheses.isValid("([])"));
+    }
+
+    private static void testReversedLinkedList() {
         ListNode head = ListNode.generate(1, 5);
         head.printThisAndAllNext();
         ListNode reversedIteratively = ReverseLinkedList.reverseIteratively(head);
