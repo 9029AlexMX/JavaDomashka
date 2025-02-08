@@ -5,6 +5,13 @@ public class Main {
         // Just testing.
         // testReversedLinkedList();
         testValidParentheses();
+
+        int[] test1 = new int[]{0,1,0,3,12};
+        MoveZeroes.run(test1);
+        for (int i=0; i<test1.length; i++) {
+            System.out.print(test1[i]);
+            System.out.print(' ');
+        }
     }
 
     private static void testValidParentheses() {
