@@ -18,4 +18,14 @@ public class MoveZeroes {
             nums[i] = 0;
         }
     }
+
+    public static void test(int[] nums)
+    {
+        MoveZeroes.run(nums);
+        for (int i=0; i<nums.length; i++) {
+            System.out.print(nums[i]);
+            System.out.print(' ');
+        }
+        System.out.println(' ');
+    }
 }

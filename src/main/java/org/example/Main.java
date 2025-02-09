@@ -3,15 +3,19 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
         // Just testing.
-        // testReversedLinkedList();
+        System.out.println("=================== TEST REVERSED LINKED LIST ===================");
+        testReversedLinkedList();
+        System.out.println("=================== TEST VALID PARENTHESES ===================");
         testValidParentheses();
+        System.out.println("=================== TEST MOVE ZEROES ===================");
+        testMoveZeroes();
+    }
 
-        int[] test1 = new int[]{0,1,0,3,12};
-        MoveZeroes.run(test1);
-        for (int i=0; i<test1.length; i++) {
-            System.out.print(test1[i]);
-            System.out.print(' ');
-        }
+    private static void testMoveZeroes() {
+        MoveZeroes.test(new int[]{0,1,0,3,12});
+        MoveZeroes.test(new int[]{0});
+        MoveZeroes.test(new int[]{1,2,3,4});
+        MoveZeroes.test(new int[]{0,0,0,1,0,2,3,0,0,4,0,0});
     }
 
     private static void testValidParentheses() {
