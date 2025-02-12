@@ -1,21 +1,27 @@
 package org.example;
 
+/**
+ * Main.
+ */
 public class Main {
-    public static void main(String[] args) {
+    private Main() {
+    }
+
+    public static void main(final String[] args) {
         // Just testing.
-        System.out.println("=================== TEST REVERSED LINKED LIST ===================");
+        System.out.println("==== TEST REVERSED LINKED LIST ====");
         testReversedLinkedList();
-        System.out.println("=================== TEST VALID PARENTHESES ===================");
+        System.out.println("==== TEST VALID PARENTHESES ====");
         testValidParentheses();
-        System.out.println("=================== TEST MOVE ZEROES ===================");
+        System.out.println("==== TEST MOVE ZEROES ====");
         testMoveZeroes();
     }
 
     private static void testMoveZeroes() {
-        MoveZeroes.test(new int[]{0,1,0,3,12});
+        MoveZeroes.test(new int[]{0, 1, 0, 3, 12});
         MoveZeroes.test(new int[]{0});
-        MoveZeroes.test(new int[]{1,2,3,4});
-        MoveZeroes.test(new int[]{0,0,0,1,0,2,3,0,0,4,0,0});
+        MoveZeroes.test(new int[]{1, 2, 3, 4});
+        MoveZeroes.test(new int[]{0, 0, 0, 1, 0, 2, 3, 0, 0, 4, 0, 0});
     }
 
     private static void testValidParentheses() {
@@ -34,7 +40,7 @@ public class Main {
         ListNode reversedRecursively = head.reverseRecursively(null);
         reversedRecursively.printThisAndAllNext();
 
-        System.out.println("===================");
+        System.out.println("====");
 
         ListNode head2 = ListNode.generate(1, 2);
         head2.printThisAndAllNext();
@@ -43,7 +49,7 @@ public class Main {
         ListNode reversedRecursively2 = head2.reverseRecursively(null);
         reversedRecursively2.printThisAndAllNext();
 
-        System.out.println("===================");
+        System.out.println("====");
 
         ListNode head3 = new ListNode(10);
         head3.printThisAndAllNext();
