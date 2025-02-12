@@ -10,8 +10,7 @@ public class ListNode {
     /**
      * Added just for testing.
      */
-    public void printThisAndAllNext()
-    {
+    public void printThisAndAllNext() {
         ListNode reversed = this;
         do {
             System.out.println(reversed.val);
@@ -27,7 +26,7 @@ public class ListNode {
     {
         ListNode head = new ListNode();
         ListNode node = head;
-        for (int i=start; i <= end; i++) {
+        for (int i = start; i <= end; i++) {
             node.val = i;
             node.next = i < end ? new ListNode() : null;
             node = node.next;
