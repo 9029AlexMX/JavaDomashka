@@ -3,8 +3,12 @@ package org.example;
 import org.example.domashka2.Address;
 import org.example.domashka2.Grade;
 import org.example.domashka2.Student;
+import org.example.domashka2.StudentGrade;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public final class Main {
     private Main() {
@@ -162,10 +166,12 @@ public final class Main {
             studentStuart,
             studentShawn
         );
-        studentList.stream()
+        List<List<StudentGrade>> collected = studentList.stream()
             .filter(s -> s.getAge() > 15 && s.getAddress().getCity().equals("New York"))
-            .map(Student::getName)
-            .forEach(System.out::println);
+            .map(s -> s.getGrades().stream()
+               .map(g -> new StudentGrade(s.getName(), s.getSchool(), g.getSubject(), g.getScore()))
+               .toList())
+            .toList(); // TODO: ! Transform
 
         // System.out.println("Hello World !");
     }

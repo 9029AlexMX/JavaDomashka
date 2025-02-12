@@ -15,4 +15,12 @@ public class Grade {
         this.subject = subject;
         this.score = score;
     }
+
+    public double getScore() {
+        return score;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
 }
