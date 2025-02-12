@@ -1,4 +1,4 @@
-package org.example;
+package org.example.domashka2;
 
 public class Grade {
     /**
