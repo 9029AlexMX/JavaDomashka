@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Stack;
 
 public class ValidParentheses {
-    private static final HashMap<Character,Character> bracketsMap = new HashMap<>();
+    private static final Map<Character,Character> bracketsMap = new HashMap<>();
     private static final List<Character> opening = Arrays.asList('(', '[', '{');
     private static final List<Character> closing = Arrays.asList(')', ']', '}');
 
