@@ -27,7 +27,7 @@ public class ListNode {
     {
         ListNode head = new ListNode();
         ListNode node = head;
-        for (int i=start; i <= end; i++)
+        for (int i = start; i <= end; i++)
         {
             node.val = i;
             node.next = i < end ? new ListNode() : null;
