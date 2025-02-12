@@ -7,8 +7,7 @@ import java.util.Stack;
 
 public class ValidParentheses {
     private static final HashMap<Character,Character> bracketsMap = new HashMap<>();
-    private static final List<Character> opening = Arrays.asList('(', '[', '{');
-    private static final List<Character> closing = Arrays.asList(')', ']', '}');
+    private static final List<Character> opening = List.of('(', '[', '{');
 
     public static void init() {
         bracketsMap.put(')','(');
@@ -18,19 +17,14 @@ public class ValidParentheses {
 
     public static boolean isValid(String s) {
         Stack<Character> stack = new Stack<>();
-        stack.push(s.charAt(0));
 
-        for (int i = 1; i < s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             if (opening.contains(c)) {
                 stack.push(c);
-            }
-            else if(stack.peek() == bracketsMap.get(c))
-            {
+            } else if(stack.peek() == bracketsMap.get(c)) {
                 stack.pop();
-            }
-            else
-            {
+            } else {
                 return false;
             }
         }

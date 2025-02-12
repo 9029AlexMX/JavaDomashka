@@ -19,7 +19,7 @@ public class MoveZeroes {
         int notZeroesCount = 0;
 
         for (int i = 0; i < nums.length; i++) {
-            number = (int) Array.get(nums, i);
+            number = (int) nums[i];
             if (number != 0) {
                 nums[notZeroesCount++] = number;
             }

@@ -57,7 +57,5 @@ public class Main {
         reversedIteratively3.printThisAndAllNext();
         ListNode reversedRecursively3 = head3.reverseRecursively(null);
         reversedRecursively3.printThisAndAllNext();
-
-        // Not sure how to create "Input: head = []" since looks like head means that it least 1 value is present.
     }
 }
