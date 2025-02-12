@@ -10,8 +10,7 @@ public class ListNode {
     /**
      * Added just for testing.
      */
-    public void printThisAndAllNext()
-    {
+    public void printThisAndAllNext() {
         ListNode reversed = this;
         do
         {
