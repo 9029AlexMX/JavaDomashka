@@ -13,8 +13,7 @@ public class ListNode {
     public void printThisAndAllNext()
     {
         ListNode reversed = this;
-        do
-        {
+        do {
             System.out.println(reversed.val);
             reversed=reversed.next;
         }
@@ -28,8 +27,7 @@ public class ListNode {
     {
         ListNode head = new ListNode();
         ListNode node = head;
-        for (int i=start; i <= end; i++)
-        {
+        for (int i=start; i <= end; i++) {
             node.val = i;
             node.next = i < end ? new ListNode() : null;
             node = node.next;
@@ -40,12 +38,9 @@ public class ListNode {
 
     public ListNode reverseRecursively(ListNode next)
     {
-        if(this.next != null)
-        {
+        if(this.next != null) {
             return this.next.reverseRecursively(new ListNode(this.val, next));
-        }
-        else
-        {
+        } else {
             return new ListNode(this.val, next);
         }
     }
