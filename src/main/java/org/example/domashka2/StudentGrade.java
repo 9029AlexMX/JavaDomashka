@@ -24,22 +24,22 @@ public class StudentGrade {
     /**
      * Name of the student.
      */
-    String studentName;
+    private String studentName;
 
     /**
      * The name of the school the student attends.
      */
-    String school;
+    private String school;
 
     /**
      * Name of the subject.
      */
-    String subject;
+    private String subject;
 
     /**
      * Score obtained in the subject.
      */
-    double score;
+    private double score;
 
     /**
      * Returns name of the student.
