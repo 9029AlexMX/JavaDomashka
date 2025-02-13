@@ -6,9 +6,6 @@ import org.example.domashka2.Student;
 import org.example.domashka2.StudentGrade;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 public final class Main {
     private Main() {
@@ -166,13 +163,15 @@ public final class Main {
             studentStuart,
             studentShawn
         );
-        List<List<StudentGrade>> collected = studentList.stream()
+        studentList.stream()
             .filter(s -> s.getAge() > 15 && s.getAddress().getCity().equals("New York"))
             .map(s -> s.getGrades().stream()
                .map(g -> new StudentGrade(s.getName(), s.getSchool(), g.getSubject(), g.getScore()))
                .toList())
-            .toList(); // TODO: ! Transform
-
-        // System.out.println("Hello World !");
+            .toList().stream()
+                .flatMap(List::stream)
+                .sorted((sg1, sg2) -> sg1.getScore() < sg2.getScore() ? 1 : -1)
+                .limit(3)
+                .forEach(System.out::println);
     }
 }

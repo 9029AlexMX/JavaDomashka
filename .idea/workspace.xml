@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f47060da-f45a-46c1-81e3-77d336bc87f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domashka2/StudentGrade.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domashka2/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domashka2/Address.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domashka2/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domashka2/Grade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domashka2/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domashka2/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domashka2/StudentGrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domashka2/StudentGrade.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
