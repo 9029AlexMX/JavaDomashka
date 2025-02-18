@@ -168,7 +168,6 @@ public final class Main {
             .map(s -> s.getGrades().stream()
                .map(g -> new StudentGrade(s.getName(), s.getSchool(), g.getSubject(), g.getScore()))
                .toList())
-            .toList().stream()
                 .flatMap(List::stream)
                 .sorted((sg1, sg2) -> sg1.getScore() < sg2.getScore() ? 1 : -1)
                 .limit(3)
