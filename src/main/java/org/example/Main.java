@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.util.ConnectionUtil;
+
 public final class Main {
     private Main() {
     }
@@ -10,6 +12,7 @@ public final class Main {
      * @param args Arguments.
      */
     public static void main(final String[] args) {
+        ConnectionUtil.getConnection();
         System.out.println("Hello World !");
     }
 }
