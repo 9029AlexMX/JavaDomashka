@@ -1,5 +1,7 @@
 package org.example.util;
 
+import org.example.exception.DatabaseConnectionException;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -16,7 +18,7 @@ public class ConnectionUtil {
         try {
             Class.forName(DRIVER_CLASS_NAME);
         } catch (ClassNotFoundException e) {
-            System.out.println("Can't load JDBC driver");
+            throw new DatabaseConnectionException("Can't load JDBC driver", e);
         }
     }
 
@@ -24,9 +26,7 @@ public class ConnectionUtil {
         try {
             return DriverManager.getConnection(DB_URL, DB_PROPERTIES);
         } catch (SQLException e) {
-            System.out.println("Unable get connection to DB");
-            System.out.print(e);
-            return null;
+            throw new DatabaseConnectionException("Unable get connection to DB", e);
         }
     }
 }

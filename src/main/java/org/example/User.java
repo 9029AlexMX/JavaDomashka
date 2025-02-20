@@ -1,9 +1,26 @@
 package org.example;
 
 public class User {
+    private Long id=null;
     private String email;
     private String phone=null;
     private String password;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                '}';
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getEmail() {
         return email;
