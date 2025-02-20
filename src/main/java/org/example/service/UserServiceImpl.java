@@ -1,4 +1,8 @@
-package org.example;
+package org.example.service;
+
+import org.example.model.User;
+import org.example.repository.UserRepository;
+import org.example.repository.UserRepositoryImpl;
 
 import java.util.Optional;
 

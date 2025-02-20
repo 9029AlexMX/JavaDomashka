@@ -1,9 +1,9 @@
-package org.example;
+package org.example.repository;
 
+import org.example.model.User;
 import org.example.exception.DatabaseQueryException;
 import org.example.util.ConnectionUtil;
 
-import java.math.BigDecimal;
 import java.sql.*;
 import java.util.Optional;
 

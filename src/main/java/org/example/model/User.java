@@ -1,4 +1,4 @@
-package org.example;
+package org.example.model;
 
 public class User {
     private Long id=null;
