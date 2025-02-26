@@ -2,12 +2,15 @@ package org.example.service;
 
 import org.example.model.User;
 import org.example.repository.UserRepository;
-import org.example.repository.UserRepositoryImpl;
 
 import java.util.Optional;
 
 public class UserServiceImpl implements UserService {
-    private final UserRepository userRepository = new UserRepositoryImpl();
+    private final UserRepository userRepository;
+
+    public UserServiceImpl(UserRepository repository) {
+        userRepository = repository;
+    }
 
     @Override
     public UserResponseDto registerUser(UserRegistrationDto userRegistrationDto) {
