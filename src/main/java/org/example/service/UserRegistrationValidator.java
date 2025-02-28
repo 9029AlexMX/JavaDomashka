@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserRegistrationValidator {
-    void validate(UserRegistrationDto user) {
+    public void validate(UserRegistrationDto user) {
         UserRegistrationValidationException e = new UserRegistrationValidationException();
         if(user.getEmail() == null) {
             e.errorList.put("email", List.of("Email is required."));
