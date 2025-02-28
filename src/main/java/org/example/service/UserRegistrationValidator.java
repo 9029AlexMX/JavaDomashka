@@ -1,5 +1,6 @@
 package org.example.service;
 
+import com.google.i18n.phonenumbers.NumberParseException;
 import com.google.i18n.phonenumbers.PhoneNumberUtil;
 import com.google.i18n.phonenumbers.Phonenumber.PhoneNumber;
 import org.apache.commons.validator.routines.EmailValidator;
@@ -17,9 +18,14 @@ public class UserRegistrationValidator {
         }
 
         if(user.getPhoneNumber() != null) {
-            PhoneNumber phoneNumber = new PhoneNumber();
-            phoneNumber.setRawInput(user.getPhoneNumber());
-            if(!PhoneNumberUtil.getInstance().isValidNumber(phoneNumber)) {
+            PhoneNumber numberProto = null;
+            PhoneNumberUtil phoneUtil = PhoneNumberUtil.getInstance();
+            try {
+                numberProto = phoneUtil.parse(user.getPhoneNumber(), "UA");
+            } catch (NumberParseException phoneNumberParseException) {
+                e.errorList.put("phoneNumber", List.of("Please enter valid phone number."));
+            }
+            if(numberProto != null && !phoneUtil.isValidNumber(numberProto)) {
                 e.errorList.put("phoneNumber", List.of("Please enter valid phone number."));
             }
         }
@@ -32,7 +38,7 @@ public class UserRegistrationValidator {
         if(user.getRepeatPassword() == null) {
             repeatPasswordErrors.add("Repeat password is required.");
         }
-        if(!user.getPassword().equals(user.getRepeatPassword())) {
+        if(user.getPassword() != null && !user.getPassword().equals(user.getRepeatPassword())) {
             repeatPasswordErrors.add("Entered passwords do not match.");
         }
         if(!repeatPasswordErrors.isEmpty()) {
