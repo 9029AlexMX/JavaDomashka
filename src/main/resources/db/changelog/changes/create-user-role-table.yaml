@@ -1,0 +1,29 @@
+databaseChangeLog:
+  -  changeSet:
+       id: user-role-create-table
+       author:  alexey.fedorov
+       changes:
+         - createTable:
+             columns:
+               - column:
+                  constraints:
+                    nullable: false
+                  name: id
+                  type: bigint
+               - column:
+                   name:  name
+                   type:  varchar(255)
+               - column:
+                   name: email
+                   type: varchar(255)
+             tableName:  user_role
+         - addAutoIncrement:
+             columnDataType: int
+             columnName: id
+             defaultOnNull: false
+             generationType: ALWAYS
+             incrementBy: 1
+             tableName: user_role
+       rollback:
+         - dropTable:
+             tableName: user_role
