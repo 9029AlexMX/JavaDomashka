@@ -3,8 +3,11 @@ package org.example.util;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
-public class JpaUtil {
-    private static final EntityManagerFactory instance = initEntityManagerFactory();
+public final class JpaUtil {
+    private JpaUtil() {
+    }
+
+    private static final EntityManagerFactory INSTANCE = initEntityManagerFactory();
 
     private static EntityManagerFactory initEntityManagerFactory() {
         try {
@@ -15,6 +18,6 @@ public class JpaUtil {
     }
 
     public static EntityManagerFactory getEntityManagerFactory() {
-        return instance;
+        return INSTANCE;
     }
 }

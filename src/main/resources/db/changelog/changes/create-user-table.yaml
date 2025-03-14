@@ -1,6 +1,6 @@
 databaseChangeLog:
   -  changeSet:
-       id: user-role-create-table
+       id: user-create-table
        author:  alexey.fedorov
        changes:
          - createTable:
@@ -15,7 +15,10 @@ databaseChangeLog:
                - column:
                    name:  name
                    type:  varchar(255)
-             tableName:  user_role
+               - column:
+                   name: email
+                   type: varchar(255)
+             tableName:  user
        rollback:
          - dropTable:
-             tableName: user_role
+             tableName: user

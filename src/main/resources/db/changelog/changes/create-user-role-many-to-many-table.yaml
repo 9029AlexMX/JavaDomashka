@@ -1,0 +1,35 @@
+databaseChangeLog:
+  -  changeSet:
+       id: user-to-role-create-table
+       author:  alexey.fedorov
+       changes:
+         - createTable:
+             columns:
+               - column:
+                  constraints:
+                    nullable: false
+                  name: user_id
+                  type: bigint
+               - column:
+                   constraints:
+                     nullable: false
+                   name: role_id
+                   type: bigint
+             tableName:  user_to_role
+         - addForeignKeyConstraint:
+             baseColumnNames: user_id
+             baseTableName: user_to_role
+             constraintName:  fk_user_id
+             onDelete: CASCADE
+             referencedColumnNames: id
+             referencedTableName: user
+         - addForeignKeyConstraint:
+             baseColumnNames: role_id
+             baseTableName: user_to_role
+             constraintName:  fk_role_id
+             onDelete: CASCADE
+             referencedColumnNames: id
+             referencedTableName: user_role
+       rollback:
+         - dropTable:
+             tableName: user_to_role

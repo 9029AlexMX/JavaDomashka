@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="996f6826-85e3-4380-939b-c384734a4757" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/changes/create-user-role-table.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/liquibase.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/changes/create-user-role-many-to-many-table.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/changes/create-user-table.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/util/JpaUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/util/JpaUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/changes/create-user-role-table.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/changes/create-user-role-table.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/liquibase.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/liquibase.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,15 +40,25 @@
     "Maven.domashka [--debug,liquibase:connect].executor": "Run",
     "Maven.domashka [--debug].executor": "Run",
     "Maven.domashka [liquibase:connect].executor": "Run",
+    "Maven.domashka [org.liquibase:liquibase-maven-plugin:4.29.2:checks.run].executor": "Run",
     "Maven.domashka [org.liquibase:liquibase-maven-plugin:4.29.2:connect].executor": "Run",
     "Maven.domashka [org.liquibase:liquibase-maven-plugin:4.29.2:update].executor": "Run",
+    "Maven.domashka [test].executor": "Run",
+    "Maven.domashka [verify].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "domashka4",
     "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Workspace/Java/JavaDomashka/src/main/resources/db/changelog/changes",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Workspace\Java\JavaDomashka\src\main\resources\db\changelog\changes" />
+    </key>
+  </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn --debug" />
