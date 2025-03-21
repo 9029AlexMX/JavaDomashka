@@ -1,0 +1,24 @@
+databaseChangeLog:
+  -  changeSet:
+       id: user-create-table
+       author:  alexey.fedorov
+       changes:
+         - createTable:
+             columns:
+               - column:
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+               - column:
+                   name:  name
+                   type:  varchar(255)
+               - column:
+                   name: email
+                   type: varchar(255)
+             tableName:  user
+       rollback:
+         - dropTable:
+             tableName: user
