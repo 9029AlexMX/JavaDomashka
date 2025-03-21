@@ -8,12 +8,9 @@
     <persistence-unit name="domashka4" transaction-type="RESOURCE_LOCAL">
         <!-- Database connection settings -->
         <properties>
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/JavaDomashka4"/>
-            <property name="javax.persistence.jdbc.user" value="JavaDomashka4User"/>
-
-            <!-- Hibernate dialect -->
-            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/JavaDomashka4"/>
+            <property name="jakarta.persistence.jdbc.user" value="JavaDomashka4User"/>
 
             <!-- Show SQL -->
             <property name="hibernate.show_sql" value="true"/>
